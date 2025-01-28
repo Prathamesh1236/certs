@@ -1,8 +1,8 @@
 #!/bin/bash
 sudo apt update
 sudo apt install openssl tree -y
-mkdir certs
-cd certs
+#mkdir certs
+#cd certs
 openssl genrsa -out www.shuhari.local.key.pem 2048
 chmod 400 www.shuhari.local.key.pem
 openssl req -config subca.cnf -new -sha256 -key www.shuhari.local.key.pem -out www.shuhari.local.csr.pem
