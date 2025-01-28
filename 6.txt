@@ -1,0 +1,10 @@
+#!/bin/bash
+sudo apt install apache2 -y
+sudo a2enmod ssl
+sudo systemctl restart apache2
+sudo mkdir /etc/apache2/ssl/
+cd /etc/apache2/ssl/
+sudo cp /home/pratham/certs/www.shuhari.local.cert_chain.pem  /etc/apache2/ssl/
+sudo cp /home/pratham/certs/www.shuhari.local.key.pem  /etc/apache2/ssl/
+sudo a2ensite default-ssl
+sudo systemctl restart apache2
