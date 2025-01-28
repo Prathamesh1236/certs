@@ -6,5 +6,5 @@ sudo apt install openssl tree -y
 openssl genrsa -out www.shuhari.local.key.pem 2048
 chmod 400 www.shuhari.local.key.pem
 openssl req -config subca.cnf -new -sha256 -key www.shuhari.local.key.pem -out www.shuhari.local.csr.pem
-scp www.shuhari.local.csr.pem pratham@192.168.80.20:/home/pratham/subca/csr/
+scp www.shuhari.local.csr.pem shuhari@192.168.80.20:/home/shuhari/subca/csr/
 echo "go to subca to sign CSR"
